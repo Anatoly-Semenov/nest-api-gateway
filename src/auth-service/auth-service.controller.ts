@@ -1,10 +1,11 @@
 import { Body, Controller, Post } from '@nestjs/common';
+import { Client, ClientKafka, Transport } from '@nestjs/microservices';
+
+import { Pattern } from './enums/pattern.enum';
 
 // Dto
 import { CreateUserDto } from '../user-service/dto';
 import { RefreshTokenDto } from './dto';
-import { Client, ClientKafka, Transport } from '@nestjs/microservices';
-import { Pattern } from './enums/pattern.enum';
 
 @Controller('auth-service')
 export class AuthServiceController {

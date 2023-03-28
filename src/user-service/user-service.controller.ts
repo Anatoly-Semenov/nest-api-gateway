@@ -7,10 +7,11 @@ import {
   Patch,
   UseGuards,
 } from '@nestjs/common';
+import { Client, ClientKafka, Transport } from '@nestjs/microservices';
+
 import { JwtAuthGuard } from '../auth-service/guards/jwt-auth.guard';
 import { GetUser } from './decorators/get-user.decorator';
 import { UpdateUserDto } from './dto';
-import { Client, ClientKafka, Transport } from '@nestjs/microservices';
 import { Pattern } from './enums/pattern.enum';
 
 @Controller('user-service')
